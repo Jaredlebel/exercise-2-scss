@@ -1,4 +1,4 @@
-// Main
+// Notes
 
 /*body {
     background-color: $background;
@@ -25,19 +25,20 @@
 ul {
     @extend .border;
 }
+
+//Main
+
 */    
-
-
-/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
-/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
-/*
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-  @font-face {
-    font-family: 'fontello';
-    src: url('../font/fontello.svg?91897367#fontello') format('svg');
-  }
+@font-face {
+  font-family: 'custom-skull';
+  src: url('../fonts/custom-skull.eot?91897367');
+  src: url('../fonts/custom-skull.eot?91897367#iefix') format('embedded-opentype'),
+       url('../fonts/custom-skull.woff?91897367') format('woff'),
+       url('../fonts/custom-skull.ttf?91897367') format('truetype'),
+       url('../fonts/custom-skull.svg?91897367#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
-*/
  
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "custom-skull";
@@ -50,26 +51,138 @@ ul {
   width: 1em;
   margin-right: .08em;
   text-align: center;
-  /* opacity: .8; */
- 
-  /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
-     
-  /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
-  /* Animation center compensation - margins should be symmetric */
-  /* remove if not needed */
   margin-left: .08em;
- 
-  /* you can be more comfortable with increased icons size */
-  /* font-size: 120%; */
- 
-  /* Uncomment for 3D effect */
-  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
 .icon-skull:before { content: '\e800'; } /* '' */
 .icon-skull-2:before { content: '\e801'; } /* '' */
 .icon-skull-3:before { content: '\e802'; } /* '' */
+
+html {
+	box-sizing: border-box;
+
+	-moz-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    background-color: $background;
+    background-image: url(../images/dust.png);
+}
+
+.bg-color {
+    -webkit-animation: color 110ms ease forwards infinite;
+    -moz-animation: color 110ms ease forwards infinite;
+    -o-animation: color 110ms ease forwards infinite;
+    animation: color 110ms ease forwards infinite;
+}
+
+@-webkit-keyframes color {
+    0% { background-color: $white; }
+    100% { background-color: $black; }
+}
+
+@-moz-keyframes color {
+    0% { background-color: $white; }
+    100% { background-color: $black; }
+}
+
+@-o-keyframes color {
+    0% { background-color: $white; }
+    100% { background-color: $black; }
+}
+
+@keyframes color {
+    0% { background-color: $white; }
+    100% { background-color: $black; }
+}
+
+.doom {
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.doom i {
+    position: relative;
+    top: 1em;
+    font-size: 8em;
+    padding: 0.1em 0.04em 0.25em 0.04em;
+    color: #fff;
+    margin: 0 auto;
+    border: solid 5px #fff;
+    border-radius: 250px 250px 800px 800px;
+}
+
+.doom-2 {
+    text-align: center;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.doom-2 i {
+    position: relative;
+    top: 0.5em;
+    font-size: 12em;
+    padding: 0.1em 0.04em 0.25em 0.04em;
+    color: $white;
+    margin: 0 auto;
+    border: solid 5px #fff;
+    border-radius: 250px 250px 800px 800px;
+}
+
+.doom i:hover {
+    top: 0.99em;
+    font-size: 8.1em;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.5);
+    transition: ease-in-out 300ms;
+}
+
+h1 {
+    position: relative;
+    top: 0.8em;
+    font-family: $Ultra;
+    font-size: 5em;
+    line-height: 1em;
+    color: $yellow;
+    padding: 0 2.5em 0 2.5em;
+    margin-top: 1.5em;
+    margin-bottom: 1.2em;
+    letter-spacing: 0.03em;
+}
+
+p {
+    font-family: $Quicksand;
+    font-size: 1em;
+    color: #ccbb9e;
+}
+
+.p-big {
+    text-decoration: none;
+    font-family: $Quicksand;
+    font-size: 1.5em;
+    color: #fff;
+    border: dashed 3px #ffa960;
+    margin: 0 18em 1.3em 18em;
+    padding: 0.3em;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+.btn {
+    background-color: #fff;
+    border: none;
+    color: #000;
+}

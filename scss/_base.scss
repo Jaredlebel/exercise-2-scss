@@ -4,21 +4,13 @@ You can store things like colours, font stacks or any css value you think you mi
 SASS uses the '$' to declare varibales */
 
 // Colours
-$primary: #3498db;
-$primary-dark: #2980b9;
-$secondary: #ccc;
-$secondary-dark: #666;
+$yellow: #ffa960;
+$red: #7c2a2a;
+$white: #fff;
+$black: #000;
 
-$background: #f5f5f5;
+$background: #7c2a2a;
 
 //Font Stacks
-$Ultra: Ultra, sans-serif;
-$Skull: custom-skull;
-  src: url('../fonts/custom-skull.eot?91897367');
-  src: url('../fonts/custom-skull.eot?91897367#iefix') format('embedded-opentype'),
-       url('../fonts/custom-skull.woff?91897367') format('woff'),
-       url('../fonts/custom-skull.ttf?91897367') format('truetype'),
-       url('../fonts/custom-skull.svg?91897367#fontello') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
+$Ultra: Ultra, serif;
+$Quicksand: Quicksand, sans-serif;
